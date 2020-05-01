@@ -1,0 +1,480 @@
+@import url('https://fonts.googleapis.com/css2?family=Kulim+Park:wght@400;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Kulim Park', sans-serif;
+}
+.container-banner{
+    width: 100%;
+    height: 650px;
+    background: url('../img/Travel_1.jpg');
+    background-size: cover;
+    background-position-y: -100px;
+    position: relative;
+}
+.header{
+    width: 100%;
+    display: flex;
+}
+.header .logo{
+    flex-basis: 20%;
+    padding: 40px 80px;
+    padding-right: 0px;
+}
+.header .logo h1{
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.header .logo h1 span{
+    color: #ec3d86;
+}
+.header .nav{
+    flex-basis: 60%;
+    padding: 30px 0px;
+}
+.nav ul{
+    display: flex;
+    justify-content: flex-end;
+}
+.nav ul li{
+    list-style: none;
+    margin-right: 10px;
+}
+.nav ul li:last-child{
+    margin-right: 0px;
+}
+.nav ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 18px;
+}
+.nav ul li a:hover{
+    background: #ffc295;
+    color: #ec3d86;
+}
+.active{
+    background: #ffc295;
+    color: #ec3d86 !important;
+}
+.header .search{
+    flex-basis: 20%;
+    padding: 40px 80px;
+}
+.search i{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 20px;
+    color: #133886;
+}
+.content-info{
+    width: 100%;
+    display: flex;
+}
+.content-info .social{
+    width: 10%;
+    position: relative;
+}
+.content-info .social:before{
+    content: '';
+    position: absolute;
+    left: 85px;
+    top: 0;
+    width: 2px;
+    height: 120px;
+    background: #ffc295;
+}
+.content-info .social:after{
+    content: '';
+    position: absolute;
+    left: 85px;
+    bottom: -120px;
+    width: 2px;
+    height: 120px;
+    background: #ffc295;
+}
+.social a{
+    display: block;
+    margin: 50px 80px;
+    color: #ffc295;
+}
+.social a:first-child{
+    margin-top: 170px;
+}
+.content-info .info-principal{
+    width: 90%;
+}
+.info-principal .titulo{
+    text-align: center;
+    margin-top: 50px;
+}
+.info-principal .titulo h1{
+    font-size: 100px;
+    color: #fff;
+    font-weight: 700;
+}
+.info-principal .info-botons{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.info-botons .btn-play-video{
+    margin-right: 30px;
+}
+.info-botons .btn-play-video a{
+    color: #fff;
+    text-decoration: none;
+    margin-right: 40px;
+}
+.info-botons .btn-play-video a i{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    margin-right: 20px;
+}
+.info-botons .btn-explore a{
+    text-decoration: none;
+    display: block;
+    padding: 20px 50px;
+    background: #ec3d86;
+    color: #fff;
+}
+.info-botons .btn-explore a:hover{
+    background: #ec9b61;
+}
+.info-principal .info-places{
+    width: 50%;
+    height: 30%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    display: flex;
+}
+.info-places .text-places{
+    padding: 30px 40px;
+    width: 45%;
+}
+.info-places .text-places p{
+    color: #fff;
+    font-size: 25px;
+}
+.info-places .text-places a{
+    text-decoration: none;
+    color: #ec9b61;
+    display: block;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.info-places .img{
+    width: 55%;
+    height: 100%;
+}
+.info-places .img img{
+    width: 220px;
+    display: block;
+    margin: 22px auto;
+}
+.background-blur{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../img/Travel_1.jpg');
+    background-size: cover;
+    background-position-y: -100px;
+    bottom: 0;
+    right: 0;
+    clip-path: polygon(50% 70%, 100% 70%, 100% 100%, 50% 100%);
+    filter: blur(5px);
+    z-index: 1;
+    transition: .5s;
+}
+
+/* ------------------ RESPONSIVE ------------------- */
+/* -------------------- DESIGN --------------------- */
+
+@media only screen and (min-width: 980px) and (max-width: 1199px){
+    .container-banner{
+        background-position-y: 0px;
+    }
+    .header .logo{
+        padding: 40px;
+        padding-right: 0px;
+    }
+    .header .search{
+        padding: 40px;
+    }
+    .content-info .social:before{
+        left: 45px;
+    }
+    .content-info .social:after{
+        left: 45px;
+    }
+    .social a{
+        margin: 50px 40px;
+    }
+    .info-places .text-places{
+        padding: 30px;
+    }
+    .info-places .text-places p{
+        font-size: 22px;
+    }
+    .background-blur{
+        background-position-y: 0px;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 979px){
+    .container-banner{
+        background-position-y: 0px;
+        background-position-x: -180px;
+    }
+    .header{
+        display: block;
+    }
+    .header .logo{
+        width: 100%;
+        background: rgba(19, 56, 134, .5);
+        padding: 10px;
+    }
+    .header .logo h1{
+        text-align: center;
+    }
+    .btnmenu{
+        position: absolute;
+        left: 20px;
+        top: 70px;
+        cursor: pointer;
+    }
+    .btnmenu span{
+        display: block;
+        width: 40px;
+        height: 3px;
+        background: #fff;
+        margin-top: 7px;
+    }
+    .btnmenu span:first-child{
+        margin-top: 0px;
+    }
+    .nav{
+        width: 100%;
+        padding: 10px 0px;
+        background: rgba(19, 56, 134, .5);
+        position: absolute;
+        top: 110px;
+        left: -100%;
+        transition: .5s;
+    }
+    .mostrar{
+        left: 0;
+    }
+    .l1, .l2, .l3{
+        transition: .5s;
+    }
+    .rotatel1{
+        transform: translateY(10px) rotate(45deg);
+    }
+    .ocultarl2{
+        transform: scaleX(0);
+    }
+    .rotatel3{
+        transform: translateY(-10px) rotate(-45deg);
+    }
+    .nav ul{
+        display: block;
+        padding: 10px;
+    }
+    .nav ul li{
+        margin-right: 0px;
+    }
+    .nav ul li a{
+        text-align: center;
+    }
+    .header .search{
+        width: 100%;
+        padding: 20px;
+    }
+    .content-info .social:before{
+        left: 30px;
+        height: 100px;
+    }
+    .content-info .social:after{
+        left: 30px;
+        height: 100px;
+    }
+    .social a{
+        margin: 50px 25px;
+    }
+    .info-principal .titulo{
+        margin-top: 30px;
+    }
+    .info-principal .titulo h1{
+        font-size: 90px;
+    }
+    .info-principal .info-botons{
+        margin-top: 20px;
+    }
+    .info-botons .btn-play-video{
+        margin-right: 10px;
+    }
+    .info-principal .info-places{
+        width: 90%;
+    }
+    .info-places .text-places p{
+        font-size: 20px;
+    }
+    .info-places .text-places a{
+        font-size: 18px;
+    }
+    .info-places .img img{
+        width: 200px;
+        margin: 30px auto;
+    }
+    .background-blur{
+        background-position-y: 0px;
+        clip-path: polygon(10% 70%, 100% 70%, 100% 100%, 10% 100%);
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 479px){
+    .container-banner{
+        background-position-y: 0px;
+        background-position-x: -180px;
+    }
+    .header{
+        display: block;
+    }
+    .header .logo{
+        width: 100%;
+        background: rgba(19, 56, 134, .5);
+        padding: 10px;
+    }
+    .header .logo h1{
+        text-align: center;
+    }
+    .btnmenu{
+        position: absolute;
+        left: 20px;
+        top: 70px;
+        cursor: pointer;
+    }
+    .btnmenu span{
+        display: block;
+        width: 40px;
+        height: 3px;
+        background: #fff;
+        margin-top: 7px;
+    }
+    .btnmenu span:first-child{
+        margin-top: 0px;
+    }
+    .nav{
+        width: 100%;
+        padding: 10px 0px;
+        background: rgba(19, 56, 134, .5);
+        position: absolute;
+        top: 110px;
+        left: -100%;
+        transition: .5s;
+    }
+    .mostrar{
+        left: 0;
+    }
+    .l1, .l2, .l3{
+        transition: .5s;
+    }
+    .rotatel1{
+        transform: translateY(10px) rotate(45deg);
+    }
+    .ocultarl2{
+        transform: scaleX(0);
+    }
+    .rotatel3{
+        transform: translateY(-10px) rotate(-45deg);
+    }
+    .nav ul{
+        display: block;
+        padding: 10px;
+    }
+    .nav ul li{
+        margin-right: 0px;
+    }
+    .nav ul li a{
+        padding: 10px 30px;
+        text-align: center;
+    }
+    .header .search{
+        width: 100%;
+        padding: 20px;
+    }
+    .content-info .social:before{
+        left: 20px;
+        height: 50px;
+    }
+    .content-info .social:after{
+        left: 20px;
+        height: 50px;
+        bottom: -30px;
+    }
+    .social a{
+        margin: 50px 15px;
+    }
+    .social a:first-child{
+        margin-top: 80px;
+    }
+    .info-principal .titulo{
+        margin-top: 30px;
+    }
+    .info-principal .titulo h1{
+        font-size: 60px;
+    }
+    .info-principal .info-botons{
+        margin-top: 30px;
+    }
+    .info-botons .btn-play-video{
+        margin-right: 5px;
+    }
+    .info-botons .btn-play-video a{
+        font-size: 16px;
+        margin-right: 10px;
+    }
+    .info-botons .btn-play-video a i{
+        width: 40px; 
+        height: 40px;
+        line-height: 40px;
+        margin-right: 10px;
+    }
+    .info-botons .btn-explore a{
+        padding: 10px 30px;
+    }
+    .info-principal .info-places{
+        width: 100%;
+    }
+    .info-places .text-places{
+        padding: 20px;
+    }
+    .info-places .text-places p{
+        font-size: 20px;
+    }
+    .info-places .text-places a{
+        font-size: 18px;
+    }
+    .info-places .img img{
+        width: 150px;
+        margin: 50px auto;
+    }
+    .background-blur{
+        background-position-y: 0px;
+        clip-path: polygon(0% 70%, 100% 70%, 100% 100%, 0% 100%);
+    }
+}
